@@ -19,3 +19,9 @@
 #validator.active i:before {
     display: block;
 }
+
+#buttons {
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+}
