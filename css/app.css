@@ -40,6 +40,12 @@
     display: block;
 }
 
+#buttons {
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+}
+
 #text-container h2, #text-container h4 {
     font-family: Stellar, sans-serif !important;
 }
