@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Stellar";
+    src: url("../fonts/Stellar/Stellar-Medium.otf") format('truetype');
+}
+
 #topbar {
     justify-content: center;
     margin-bottom: 25px;
@@ -5,6 +10,7 @@
 
 #topbar a {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #validator {
@@ -16,6 +22,40 @@
     display: none;
 }
 
+#false-h4 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+#navbar .ui.small.image, .ui.small.images .image, .ui.small.images img, .ui.small.images svg {
+    display: contents !important;
+}
+
+#navbar > .ui.image img, .ui.image svg {
+    fill: white;
+    stroke: white;
+}
+
 #validator.active i:before {
     display: block;
+}
+
+#text-container h2, #text-container h4 {
+    font-family: Stellar, sans-serif !important;
+}
+
+#image-container {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.ui.menu:not(#topbar) {
+    background-color: #fbbb21 !important;
+}
+
+.ui.menu .item::before {
+    top: 25% !important;
+    height: 50% !important;
+    width: 2px !important;
+    color: white !important;
 }
