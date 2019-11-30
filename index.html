@@ -4,29 +4,147 @@
     <meta charset="UTF-8">
     <title>Hello Alert!</title>
     <link href="./libs/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css">
-    </head>
+    <link href="./css/app.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-<div class="ui bottom fixed five item large menu">
+<div class="ui menu" id="topbar">
+    <a class="ui tiny image" href="index.html">
+        <img src="./images/logo.svg">
+    </a>
+</div>
+<div class="ui two column centered grid">
+    <div class="ui container">
+        <div class="four column centered row" id="text-container">
+            <h2 class="ui header">Bonjour Céline</h2>
+            <h4 id="false-h4" class="ui header">Aujourd’hui cela fait <b>100</b> jours que vous prenez votre traitement ! Félicitations !</h4>
+        </div>
+    </div>
+    <div class="sixteen column centered row" id="image-container">
+        <img class="ui centered fluid image" src="./images/visuel%20avatar.svg">
+    </div>
+</div>
+<div class="ui bottom fixed five item menu" id="navbar">
     <a class="item" href="timer.html">
-        <i class="clock outline icon"></i>
+        <div class="ui centered small image">
+            <svg width="20" height="20">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 72.51 85.45" style="enable-background:new 0 0 72.51 85.45;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+        stroke: #020202;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+    }
+</style>
+                    <g>
+	<path class="st0" d="M36.64,83.69C17.68,83.69,2.3,68.31,2.3,49.35s15.38-34.29,34.34-34.29S70.98,30.44,70.98,49.4
+		S55.61,83.69,36.64,83.69z M36.64,23.65c-14.24,0-25.76,11.52-25.76,25.76c0,14.24,11.52,25.76,25.76,25.76S62.4,63.65,62.4,49.41
+		C62.4,35.17,50.88,23.65,36.64,23.65z"/>
+                        <path class="st0" d="M45.23,10.77H28.06c-2.39,0-4.29-1.9-4.29-4.29s1.96-4.29,4.29-4.29h17.17c2.39,0,4.29,1.9,4.29,4.29
+		S47.56,10.77,45.23,10.77z"/>
+                        <path class="st0" d="M36.64,53.64c-2.39,0-4.29-1.9-4.29-4.29V36.53c0-2.39,1.9-4.29,4.29-4.29s4.29,1.9,4.29,4.29v12.88
+		C40.93,51.74,39.03,53.64,36.64,53.64z"/>
+</g>
+</svg>
+            </svg>
+        </div>
     </a>
     <a class="item" href="calendar.html">
-        <i class="calendar alternate icon"></i>
+        <div class="ui centered small image">
+            <svg width="20" height="20">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 70.47 76.13" style="enable-background:new 0 0 70.47 76.13;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+    }
+</style>
+                    <path class="st0" d="M57.48,9.01h-6.94v-3.8c0-1.73-1.25-3.21-2.89-3.21c-1.56,0-2.89,1.38-2.89,3.21v3.8H25.19v-3.8
+	C25.19,3.48,23.94,2,22.3,2s-2.89,1.38-2.89,3.21v3.8h-6.85c-6.05,0-10.9,5.48-10.9,12.1v41.37c0,6.71,4.94,12.1,10.9,12.1h44.97
+	c6.05,0,10.9-5.48,10.9-12.1V21.11C68.38,14.49,63.44,9.01,57.48,9.01z M12.56,15.33h6.94v3.8c0,1.73,1.25,3.21,2.89,3.21
+	c1.6,0,2.89-1.38,2.89-3.21v-3.8h19.66v3.8c0,1.73,1.25,3.21,2.89,3.21c1.56,0,2.89-1.38,2.89-3.21v-3.8h6.81
+	c2.89,0,5.2,2.57,5.2,5.78v7.41H7.35v-7.41C7.36,17.89,9.67,15.33,12.56,15.33z M57.48,68.25H12.56c-2.89,0-5.2-2.57-5.2-5.78v-27.6
+	h55.33v27.6C62.69,65.69,60.38,68.25,57.48,68.25z"/>
+</svg>
+            </svg>
+        </div>
     </a>
     <a class="item" href="alert.html">
-        <i class="exclamation icon"></i>
+        <div class="ui centered small image">
+            <svg width="20" height="20">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 77.23 68.64" style="enable-background:new 0 0 77.23 68.64;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 3;
+        stroke-miterlimit: 10;
+    }
+</style>
+                    <path class="st0" d="M73.9,50.54L47.93,6.89c-1.86-3.43-5.39-5.39-9.21-5.39s-7.35,1.96-9.26,5.29L3.54,50.54
+	c-2.01,3.33-2.01,7.5-0.05,10.83s5.44,5.44,9.46,5.44h51.69c3.97,0,7.5-2.06,9.46-5.44C76.01,58.03,76.01,53.87,73.9,50.54z
+	 M42.25,52.1c0,2.06-1.57,3.58-3.58,3.58c-2.06,0-3.58-1.57-3.58-3.58v-1.22c0-2.06,1.57-3.58,3.58-3.58c2.06,0,3.67,1.57,3.58,3.58
+	V52.1z M42.25,41.67c0,2.06-1.57,3.58-3.58,3.58c-2.06,0-3.58-1.57-3.58-3.58v-19.3c0-2.06,1.57-3.58,3.58-3.58
+	c2.06,0,3.67,1.71,3.58,3.67V41.67z"/>
+</svg>
+            </svg>
+        </div>
     </a>
     <a class="item" href="profile.html">
-        <i class="user outline icon"></i>
+        <div class="ui centered small image">
+            <svg width="20" height="20">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 76.77 75.4" style="enable-background:new 0 0 76.77 75.4;" xml:space="preserve">
+<style type="text/css">
+	.st0 {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+    }
+</style>
+                    <g>
+	<g>
+		<path class="st0" d="M38.2,42.55c10.99,0,19.98-8.99,19.98-19.98S49.19,2.59,38.2,2.59c-10.99,0-19.98,8.99-19.98,19.98
+			S27.21,42.55,38.2,42.55z"/>
+	</g>
+                        <g>
+		<path class="st0" d="M74.56,70.65c-0.49-2.28-1.12-4.52-1.8-6.51c-0.92-2.58-1.99-5.1-3.21-7.39
+			c-5.88-11.18-16.19-15.51-25.67-10.6c-3.69,1.9-7.68,1.9-11.28,0c-9.48-4.81-19.88-0.58-25.77,10.5
+			c-1.22,2.28-2.28,4.81-3.21,7.39c-0.68,2.09-1.31,4.28-1.8,6.61c-0.19,0.68,0,1.51,0.49,2.09s1.22,0.92,1.9,0.92h67.96
+			c0.78,0,1.51-0.29,1.9-0.92C74.56,72.15,74.81,71.38,74.56,70.65z"/>
+	</g>
+</g>
+</svg>
+            </svg>
+        </div>
     </a>
     <a class="item">
-        <i class="pills icon"></i>
+        <div class="ui centered small image">
+            <svg width="20" height="20">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 67.37 71.42" style="enable-background:new 0 0 67.37 71.42;" xml:space="preserve">
+<g transform="translate(0,-952.36218)">
+	<path d="M4.99,1018.64c-6.65-6.86-6.65-17.95,0-24.81l33.37-34.46c6.65-6.86,17.38-6.86,24.03,0s6.65,17.95,0,24.81l-33.37,34.46
+		C22.37,1025.5,11.64,1025.5,4.99,1018.64z M25.7,977.96l18.68,19.3l15.36-15.86c5.21-5.38,5.21-13.91,0-19.3s-13.47-5.38-18.68,0
+		L25.7,977.96z M50.22,982.65c-0.58-0.74-0.49-1.95,0.18-2.64l2.65-2.74c1.48-1.53,2.38-3.15,2.65-4.5c0.22-1.35,0-2.46-1.3-3.8
+		c-0.72-0.7-0.72-2.04,0-2.78s1.98-0.74,2.69,0c2.02,2.09,2.78,4.78,2.34,7.24c-0.45,2.46-1.84,4.64-3.68,6.54l-2.65,2.74
+		C52.33,983.57,50.89,983.53,50.22,982.65L50.22,982.65z"/>
+</g>
+</svg>
+            </svg>
+        </div>
     </a>
 </div>
 
-    <div class="example-wrapper">
+<div class="example-wrapper">
 
-    </div>
+</div>
 
 <script src="./libs/jquery-3.4.1.min.js"></script>
 <script src="./libs/semantic-ui/semantic.min.js"></script>
