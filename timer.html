@@ -4,30 +4,298 @@
     <meta charset="UTF-8">
     <title>Hello Alert!</title>
     <link href="./libs/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css">
-    </head>
+    <style>
+
+        body{}
+        canvas{display:block; vertical-align:bottom;}
+        #particles-js{position:absolute; width:100%; height:100%; opacity:0;}
+
+
+
+        p{position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); font-size:1.5rem; opacity:0;}
+        #ready{top:3rem; transform:translate(-50%, 0);}
+        #keep{top:auto; bottom:3rem; transform:translate(-50%, 0);}
+        #finish{animation-iteration-count:infinite;}
+
+        #timer{position:fixed; top:0; left:0; width:100%; height:100%; background:orange; animation-timing-function: linear; opacity:0;}
+
+        .time03{-webkit-animation-duration:.3s; animation-duration:.3s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time04{-webkit-animation-duration:.4s; animation-duration:.4s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time05{-webkit-animation-duration:.5s; animation-duration:.5s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time06{-webkit-animation-duration:.6s; animation-duration:.6s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time08{-webkit-animation-duration:.8s; animation-duration:.8s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time10{-webkit-animation-duration:1s; animation-duration:1s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time20{-webkit-animation-duration:2s; animation-duration:2s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time30{-webkit-animation-duration:3s; animation-duration:3s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time40{-webkit-animation-duration:4s; animation-duration:4s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time45{-webkit-animation-duration:4.5s; animation-duration:4.5s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time50{-webkit-animation-duration:5s; animation-duration:5s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+        .time2min{-webkit-animation-duration:36s; animation-duration:36s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+
+        .in{animation-name:in;}
+        @keyframes in{0%{opacity:0;} 100% {opacity:1;}}
+        .out{animation-name:out;}
+        @keyframes out{0%{opacity:1;} 100% {opacity:0;}}
+
+        .growinout{animation-name:growinout;}
+        @keyframes growinout{
+            0%{opacity:0; transform:translate(-50%, -50%) scale(.25);}
+            15%{opacity:.75;}
+            50%{opacity:1; transform:translate(-50%, -50%) scale(1);}
+            85%{opacity:.75;}
+            100%{opacity:0; transform:translate(-50%, -50%) scale(1.75);}
+        }
+
+        .bumble{animation-name:bumble;}
+        @keyframes bumble{
+            0%{opacity:0; transform:translate(-50%, 0) scale(.25);}
+            10%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            20%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            30%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            40%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            50%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            60%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            70%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            80%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            90%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            100%{opacity:0; transform:translate(-50%, 0) scale(1.25);}
+        }
+
+        .bumble2{animation-name:bumble2;}
+        @keyframes bumble2{
+            0%{opacity:1; transform:translate(-50%, 0) scale(0);}
+            10%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            20%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            30%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            40%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            50%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            60%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            70%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            80%{opacity:1; transform:translate(-50%, 0) scale(.75);}
+            90%{opacity:1; transform:translate(-50%, 0) scale(1);}
+            100%{opacity:1; transform:translate(-50%, 0) scale(0);}
+        }
+
+        .fadeinout{animation-name:fadeinout}
+        @keyframes fadeinout{
+            0%{opacity:0; transform:translate(-50%, -50%) scale(.5);}
+            25%{opacity:1; transform:translate(-50%, -50%) scale(.75);}
+            50%{opacity:1; transform:translate(-50%, -50%) scale(1);}
+            25%{opacity:1; transform:translate(-50%, -50%) scale(1.25);}
+            100%{opacity:0; transform:translate(-50%, -50%) scale(1.5);}
+        }
+
+        .slidein{animation-name:slidein}
+        @keyframes slidein{
+            0%{opacity:0; transform:translate(-50%, 100%);}
+            100%{opacity:1; transform:translate(-50%, 0%);}
+        }
+
+        .slideout{animation-name:slideout}
+        @keyframes slideout{
+            0%{opacity:1; transform:translate(-50%, 0%);}
+            100%{opacity:0; transform:translate(-50%, 100%);}
+        }
+        
+        .growin{animation-name:growin}
+        @keyframes growin{
+            0%{opacity:0; transform:translate(-50%, -50%) scale(.75);}
+            100%{opacity:1; transform:translate(-50%, -50%) scale(1);}
+        }
+
+        .growout{animation-name:growout}
+        @keyframes growout{
+            0%{opacity:1; transform:translate(-50%, -50%) scale(1);}
+            100%{opacity:0; transform:translate(-50%, -50%) scale(.75);}
+        }
+
+        .timer{animation-name:timer}
+        @keyframes timer{
+            0%{opacity:1; transform:translate(0, calc(100% - 1.07142857rem) );}
+            100%{opacity:1; transform:translate(0, 0);}
+        }
+
+        .opac{animation-name:opac}
+        @keyframes opac{
+            0%{opacity:0;}
+            100%{opacity:1;}
+        }
+    </style>
+</head>
 <body>
-<div class="ui bottom fixed five item large menu">
-    <a class="item" href="timer.html">
-        <i class="clock outline icon"></i>
-    </a>
-    <a class="item" href="calendar.html">
-        <i class="calendar alternate icon"></i>
-    </a>
-    <a class="item" href="alert.html">
-        <i class="exclamation icon"></i>
-    </a>
-    <a class="item" href="profile.html">
-        <i class="user outline icon"></i>
-    </a>
-    <a class="item">
-        <i class="pills icon"></i>
-    </a>
-</div>
+    <div id="timer"></div>
+    <div id="particles-js"></div>
+    <main class="example-wrapper">
+        <p id="ready">Prêt ?</p>
+        <p id="one">1</p>
+        <p id="two">2</p>
+        <p id="three">3</p>
+        <p id="insp">Aspire !!!</p>
+        <p id="good">Très bien !</p>
+        <p id="keep">Garde bien ton médicament sous ta langue</p>
+        <p id="info1">Savais-tu que ...</p>
+        <p id="info2">et que ...</p>
+        <p id="info3">et encore que ...</p>
+        <p id="info4">et toujours que ...</p>
+        <p id="least1">Tu as fait la moitié !<br />plus qu'une minute</p>
+        <p id="cptr5">5</p>
+        <p id="cptr4">4</p>
+        <p id="cptr3">3</p>
+        <p id="cptr2">2</p>
+        <p id="cptr1">1</p>
+        <p id="finish">Terminé !!!</p>
+    </main>
+    <footer class="ui bottom fixed five item large menu">
+        <a class="item" href="timer.html">
+            <i class="clock outline icon"></i>
+        </a>
+        <a class="item" href="calendar.html">
+            <i class="calendar alternate icon"></i>
+        </a>
+        <a class="item" href="alert.html">
+            <i class="exclamation icon"></i>
+        </a>
+        <a class="item" href="profile.html">
+            <i class="user outline icon"></i>
+        </a>
+        <a class="item">
+            <i class="pills icon"></i>
+        </a>
+    </footer>
+    <script src="assets/js/particles.min.js"></script>
+    <script>
+        var time = new Date();
+        time = time.getTime();
+        
+    
+        var playTime = 1;
 
-    <div class="example-wrapper">
+        launch();
 
-    </div>
+        //keep(2);
 
+        //end();
+
+        function end() {
+            setTimeout(function() {
+                document.getElementById("keep").className = "time20 slideout";
+                document.getElementById("finish").className = "time20 bumble2";
+                document.getElementById("particles-js").className = "time03 opac";
+            }, 1500);
+        }
+
+        function keep(nb) {
+            time2 = new Date();
+            time2 = time2.getTime();
+            console.log(time2-time);
+            if(nb == 2) {
+                document.getElementById("timer").className = "time2min timer";
+                document.getElementById("keep").className = "time20 slidein";
+            }
+            setTimeout(function() {
+                document.getElementById("info1").className = "time20 growin";
+                setTimeout(function() {
+                    document.getElementById("info1").className = "time20 growout";
+                    setTimeout(function() {
+                        document.getElementById("info2").className = "time20 growin";
+                        setTimeout(function() {
+                            document.getElementById("info2").className = "time20 growout";
+                            setTimeout(function() {
+                                document.getElementById("info3").className = "time20 growin";
+                                setTimeout(function() {
+                                    document.getElementById("info3").className = "time20 growout";
+                                    setTimeout(function() {
+                                        document.getElementById("info4").className = "time20 growin";
+                                        setTimeout(function() {
+                                            document.getElementById("info4").className = "time20 growout";
+                                            nb--;
+                                            if(nb == 0) {
+                                                time3 = new Date();
+                                                time3 = time3.getTime();
+                                                console.log(time3-time2);
+                                                end();
+                                            } else {
+                                                keep(nb);
+                                            }
+                                        }, 3000);
+                                    }, 1500);
+                                }, 3000);
+                            }, 1500);
+                        }, 3000);
+                    }, 1500);
+                }, 3000);
+            }, 1500);
+        }
+
+        function prise(nb) {
+            document.getElementById("two").className = "";
+            document.getElementById("one").className = "";
+            document.getElementById("insp").className = "time20 fadeinout";
+            setTimeout(function() {
+                document.getElementById("two").className = "time10 growinout";
+                document.getElementById("insp").className = "";
+                setTimeout(function() {
+                    document.getElementById("one").className = "time10 growinout";
+                    setTimeout(function() {
+                        nb--;
+                        if(nb > 0) {
+                            prise(nb);
+                        } else {
+                            keep(2);
+                        }
+                    },1000);
+                },1000);
+            },1000);
+        }
+        
+
+        function launch() {
+            document.getElementById("ready").className = "time50 bumble";
+            setTimeout(function() {
+                document.getElementById("three").className = "time10 growinout";
+                setTimeout(function() {
+                    document.getElementById("two").className = "time10 growinout";
+                    setTimeout(function() {
+                        document.getElementById("one").className = "time10 growinout";
+                        setTimeout(function() {
+                            prise(3);
+                        },1000);
+                    },1000);
+                },1000);
+            },2000);
+        }
+
+        particlesJS("particles-js", 
+        {"particles":
+        {"number":
+        {"value":80,"density":
+        {"enable":true,"value_area":800}},"color":
+        {"value":"#ffffff"},"shape":
+        {"type":"circle","stroke":
+        {"width":0,"color":"#000000"},"polygon":
+        {"nb_sides":5},"image":
+        {"src":"img/github.svg","width":100,"height":100}},"opacity":
+        {"value":0.5,"random":false,"anim":
+        {"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":
+        {"value":88.18766334760375,"random":true,"anim":
+        {"enable":true,"speed":214.37619774580193,"size_min":0.1,"sync":false}},"line_linked":
+        {"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":
+        {"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":
+        {"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":
+        {"detect_on":"canvas","events":
+        {"onhover":
+        {"enable":true,"mode":"repulse"},"onclick":
+        {"enable":true,"mode":"push"},"resize":true},"modes":
+        {"grab":
+        {"distance":400,"line_linked":
+        {"opacity":1}},"bubble":
+        {"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":
+        {"distance":200,"duration":0.4},"push":
+        {"particles_nb":4},"remove":
+        {"particles_nb":2}}},"retina_detect":true});
+
+    
+    </script>
 <script src="./libs/jquery-3.4.1.min.js"></script>
 <script src="./libs/semantic-ui/semantic.min.js"></script>
 </body>
