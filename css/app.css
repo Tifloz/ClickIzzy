@@ -1,0 +1,21 @@
+#topbar {
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+#topbar a {
+    margin-top: 5px;
+}
+
+#validator {
+    margin-top: 2em;
+    margin-bottom: 1.7em;
+}
+
+#validator i:before {
+    display: none;
+}
+
+#validator.active i:before {
+    display: block;
+}
