@@ -6,6 +6,7 @@
 #topbar {
     justify-content: center;
     margin-bottom: 25px;
+    z-index: 999;
 }
 
 #topbar a {
@@ -14,12 +15,16 @@
 }
 
 #validator {
-    margin-top: 2em;
-    margin-bottom: 1.7em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #validator i:before {
-    display: none;
+    color: white !important;
+}
+
+#validator {
+    background-color: #fbbb21;
 }
 
 #false-h4 {
@@ -37,7 +42,7 @@
 }
 
 #validator.active i:before {
-    display: block;
+    color: #21ba45 !important;
 }
 
 #buttons {
@@ -55,8 +60,23 @@
     margin-right: 2em;
 }
 
+h2, h3, h4, p, #example2 {
+    font-family: Stellar, sans-serif;
+}
+
 .ui.menu:not(#topbar) {
     background-color: #fbbb21 !important;
+}
+
+.ui.table td.active, .ui.table tr.active {
+    background-color: #FDD983 !important;
+}
+
+#questions , #questions h4.ui.header {
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    background-color: #fbbb21;
+    color: white;
 }
 
 .ui.menu .item::before {
