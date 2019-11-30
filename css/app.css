@@ -9,14 +9,22 @@
     z-index: 999;
 }
 
+#text-suivi {
+    margin-top: 0;
+}
+
+#topbar.cal {
+    margin-bottom: 5px;
+}
+
 #topbar a {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #validator {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 #validator i:before {
@@ -72,7 +80,7 @@ h2, h3, h4, p, #example2 {
     background-color: #FDD983 !important;
 }
 
-#questions , #questions h4.ui.header {
+#questions, #questions h4.ui.header {
     border-top-right-radius: 20%;
     border-bottom-left-radius: 20%;
     background-color: #fbbb21;
@@ -84,4 +92,9 @@ h2, h3, h4, p, #example2 {
     height: 50% !important;
     width: 2px !important;
     color: white !important;
+}
+
+#smiley-container, #smiley-container > div {
+    display: flex;
+    justify-content: center;
 }
