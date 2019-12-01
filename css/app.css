@@ -76,6 +76,17 @@ h2, h3, h4, p, #example2 {
     background-color: #fbbb21 !important;
 }
 
+#segcolor {
+    border-color: #fbbb21 !important;
+    border-width: medium;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+#textcolor {
+    background-color: #fbbb21 !important;
+}
+
 .ui.table td.active, .ui.table tr.active {
     background-color: #FDD983 !important;
 }
