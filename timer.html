@@ -5,6 +5,156 @@
     <title>Hello Alert!</title>
     <link href="./libs/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css">
     <style>
+        @font-face {
+            font-family: "Stellar";
+            src: url("./fonts/Stellar/Stellar-Medium.otf") format('truetype');
+        }
+
+        #cercle {
+            position: fixed;
+            top: 23%;
+        }
+
+        @keyframes zoominoutsinglefeatured {
+            0% {
+                transform: scale(0.9, 0.9);
+            }
+            50% {
+                transform: scale(1, 1);
+            }
+            100% {
+                transform: scale(0.9, 0.9);
+            }
+        }
+
+        .element-animation {
+            animation: animationFrames linear 4s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            -webkit-animation: animationFrames linear 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transform-origin: 50% 50%;
+            -moz-animation: animationFrames linear 4s;
+            -moz-animation-iteration-count: infinite;
+            -moz-transform-origin: 50% 50%;
+            -o-animation: animationFrames linear 4s;
+            -o-animation-iteration-count: infinite;
+            -o-transform-origin: 50% 50%;
+            -ms-animation: animationFrames linear 4s;
+            -ms-animation-iteration-count: infinite;
+            -ms-transform-origin: 50% 50%;
+        }
+
+        @keyframes animationFrames {
+            0% {
+                transform: translate(0px, -21px);
+            }
+            50% {
+                transform: translate(25px, -50px);
+            }
+            100% {
+                transform: translate(-0px, -21px);
+            }
+        }
+        .element-animation2{
+            animation: animationFrames2 linear 4s;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            -webkit-animation: animationFrames2 linear 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transform-origin: 50% 50%;
+            -moz-animation: animationFrames2 linear 4s;
+            -moz-animation-iteration-count: infinite;
+            -moz-transform-origin: 50% 50%;
+            -o-animation: animationFrames2 linear 4s;
+            -o-animation-iteration-count: infinite;
+            -o-transform-origin: 50% 50%;
+            -ms-animation: animationFrames2 linear 4s;
+            -ms-animation-iteration-count: infinite;
+            -ms-transform-origin: 50% 50%;
+        }
+
+        @keyframes animationFrames2{
+            0% {
+                transform:  translate(-50px,1px)  ;
+            }
+            50% {
+                transform:  translate(-88px,36px)  ;
+            }
+            100% {
+                transform:  translate(-53px,2px)  ;
+            }
+        }
+
+        @-moz-keyframes animationFrames2{
+            0% {
+                -moz-transform:  translate(-50px,1px)  ;
+            }
+            50% {
+                -moz-transform:  translate(-88px,36px)  ;
+            }
+            100% {
+                -moz-transform:  translate(-53px,2px)  ;
+            }
+        }
+
+        @-webkit-keyframes animationFrames2 {
+            0% {
+                -webkit-transform:  translate(-50px,1px)  ;
+            }
+            50% {
+                -webkit-transform:  translate(-88px,36px)  ;
+            }
+            100% {
+                -webkit-transform:  translate(-53px,2px)  ;
+            }
+        }
+
+        @-o-keyframes animationFrames2 {
+            0% {
+                -o-transform:  translate(-50px,1px)  ;
+            }
+            50% {
+                -o-transform:  translate(-88px,36px)  ;
+            }
+            100% {
+                -o-transform:  translate(-53px,2px)  ;
+            }
+        }
+
+        @-ms-keyframes animationFrames2 {
+            0% {
+                -ms-transform:  translate(-10px,1px)  ;
+            }
+            50% {
+                -ms-transform:  translate(-28px,26px)  ;
+            }
+            100% {
+                -ms-transform:  translate(-10px,1px)  ;
+            }
+        }
+        #cercle {
+            animation: zoominoutsinglefeatured 1s infinite;
+        }
+
+        #goutte1 {
+            position: fixed;
+            top: 15%;
+            width: 100px;
+            right: 5%;
+            animation: animationFrames 1s infinite;
+
+        }
+
+        #goutte2 {
+            position: fixed;
+            bottom: 15%;
+            width: 100px;
+            left: 15%;
+            animation: animationFrames2 1s infinite;
+
+        }
+
         canvas {
             display: block;
             vertical-align: bottom;
@@ -17,18 +167,20 @@
             opacity: 0;
         }
 
-        p {
+        .example-wrapper div {
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             font-size: 1.5rem;
             opacity: 0;
+            font-family: Stellar, sans-serif;
         }
 
         #ready {
-            top: 5rem;
+            top: 7rem;
             transform: translate(-50%, 0);
+            font-family: Stellar, sans-serif;
         }
 
         #keep {
@@ -50,6 +202,7 @@
             background: orange;
             animation-timing-function: linear;
             opacity: 0;
+            font-family: Stellar, sans-serif;
         }
 
         .time03 {
@@ -415,24 +568,27 @@
 <div id="timer"></div>
 <div id="particles-js"></div>
 <main class="example-wrapper">
-    <p id="ready">Prêt ?</p>
-    <p id="one">1</p>
-    <p id="two">2</p>
-    <p id="three">3</p>
-    <p id="insp">Aspire !!!</p>
-    <p id="good">Très bien !</p>
-    <p id="keep">Garde bien ton médicament sous ta langue</p>
-    <p id="info1">Savais-tu que ...</p>
-    <p id="info2">et que ...</p>
-    <p id="info3">et encore que ...</p>
-    <p id="info4">et toujours que ...</p>
-    <p id="least1">Tu as fait la moitié !<br/>plus qu'une minute</p>
-    <p id="cptr5">5</p>
-    <p id="cptr4">4</p>
-    <p id="cptr3">3</p>
-    <p id="cptr2">2</p>
-    <p id="cptr1">1</p>
-    <p id="finish">Terminé !!!</p>
+    <img src="./assets/goutte%201.svg" alt="" id="goutte1">
+    <img src="./assets/cercle.svg" alt="" id="cercle">
+    <img src="./assets/goutte%202.svg" alt="" id="goutte2">
+    <div id="ready">Prêt ?</div>
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+    <div id="insp">Aspire !!!</div>
+    <div id="good">Très bien !</div>
+    <div id="keep">Garde bien ton médicament sous ta langue</div>
+    <div id="info1">Savais-tu que ...</div>
+    <div id="info2">et que ...</div>
+    <div id="info3">et encore que ...</div>
+    <div id="info4">et toujours que ...</div>
+    <div id="least1">Tu as fait la moitié !<br/>plus qu'une minute</div>
+    <div id="cptr5">5</div>
+    <div id="cptr4">4</div>
+    <div id="cptr3">3</div>
+    <div id="cptr2">2</div>
+    <div id="cptr1">1</div>
+    <div id="finish">Terminé !!!</div>
 </main>
 <div class="ui bottom fixed five item menu" id="navbar">
     <a class="item" href="timer.html">
